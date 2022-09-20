@@ -32,11 +32,11 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-           my_string="AB#2345678"
+           my_string="AB#2348"
            echo "length is ${#my_string}"
-           if [ '${#my_string}' == '7']
+           if (( '${#my_string}' == '7' ))
            then echo "the pr title is correct and length is ${#my_string}"
-           elif [ ${#my_string} == 8]
+           elif (( ${#my_string} == 8))
            then echo " pr is ok and length is ${#my_string}"
            els
            echo "invalid PR"
