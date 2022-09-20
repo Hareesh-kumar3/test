@@ -34,8 +34,11 @@ jobs:
         run: |
            my_string="AB#2346788"
            echo "length is ${#my_string}"
-           if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
+           if [ ${#my_string} == ('7','8') ] ;
+           
            then echo "the pr title is correct and length is ${#my_string}"
            else
            echo "invalid PR Format"
            fi
+
+#if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
