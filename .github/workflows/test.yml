@@ -35,7 +35,7 @@ jobs:
            my_string=AB#2346788
            echo "length is ${#my_string}"
            
-           if [[ $VAR =~ ^[AB#] ]];then
+           if [[ $VAR =~ ^[A] ]];then
            echo "Input starts with AB#"
            else
            echo "Input does not starts with AB#"
