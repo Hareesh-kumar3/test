@@ -38,6 +38,6 @@ jobs:
            then echo "the pr title is correct and length is ${#my_string}"
            elif [ ${#my_string} == '8' ] ;
            then echo " pr is ok and length is ${#my_string}"
-           els
-           echo "invalid PR"
+           else
+           echo "invalid PR Format"
            fi
