@@ -54,9 +54,10 @@ jobs:
 
       - name: practice
         run: |
+          cut3= ${cut -b 4-${#my_string} ${my_string}}
+          echo cut3        
           cut1 = ${cut -d "#" -f 1 $my_string}
           echo cut1
           cut2 = ${cut -d "#" -f 2 $my_string}
           echo cut2
-          cut3= ${cut -b 4-${#my_string} ${my_string}}
-          echo cut3
+         
