@@ -49,3 +49,14 @@ jobs:
            fi
 
 #if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
+
+
+
+      - name: practice
+        run: |
+          cut1 = ${cut -d "#" -f 1 $my_string}
+          echo cut1
+          cut2 = ${cut -d "#" -f 2 $my_string}
+          echo cut2
+          cut3= ${cut -b 4-${#my_string} ${my_string}}
+          echo cut3
