@@ -65,7 +65,7 @@ jobs:
          
       - name: with while
         run: |
-          while[[ $my_string =~ ^[AB#] ] do 
+          while[[ $my_string =~ ^[AB#]]] do 
           echo "Input starts with AB#"
           if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
           then echo "the pr title is correct and length is ${#my_string}"
