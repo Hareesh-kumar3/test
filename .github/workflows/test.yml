@@ -36,9 +36,10 @@ jobs:
            echo "length is ${#my_string}"
            
            if [[ $my_string =~ ^[AB#] ]];then
-           echo "Input starts with AB#"
+           echo "PR Title starts with AB#"
            else
-           echo "Input does not starts with AB#"
+           echo "PR Title does not starts with AB#"
+           echo "::error::Enter Valid PR Title and must start with AB#"
            exit 1
            fi
            
@@ -47,6 +48,7 @@ jobs:
            then echo "the pr title is correct and length is ${#my_string}"
            else
            echo "invalid PR Format"
+           echo "::error::Enter Valid PR Title Task id after AB#"
            exit 1
            fi
 
