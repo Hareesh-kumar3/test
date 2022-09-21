@@ -54,7 +54,7 @@ jobs:
         run: |
            my_string=AB#2346
               echo "length is ${#my_string}"
-           if [[ $my_string =~ ^[AB#]] && [ ${#my_string} -eq '7' -o ${#my_string} -eq '8' ]];then
+           if [[ $my_string =~ ^[AB#]] -a [ ${#my_string} -eq '7' -o ${#my_string} -eq '8' ]];then
               echo "PR Tiltle is valid"
            else
               echo " Incorrect PR Title"
