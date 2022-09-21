@@ -50,7 +50,7 @@ jobs:
 
 #if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
 
-      - name: IF condition for two conditions
+      - name: checking PR validation
         run: |
            my_string=AB#2346788
            echo "length is ${#my_string}"
@@ -58,7 +58,7 @@ jobs:
            if [[[ $my_string =~ ^[AB#] ]] -a [ ${#my_string} == '7' -o ${#my_string} == '8' ]];then
            echo "PR Tiltle is valid"
            else
-           echo "Input does not starts with AB# or incorrect PR Title"
+           echo " Incorrect PR Title"
            fi
 
 
@@ -73,15 +73,15 @@ jobs:
 #           cut2 = ${cut -d "#" -f 2 $my_string}
 #           echo cut2
          
-      - name: with while
-        run: |
-          while[[ $my_string =~ ^[AB#]]] do 
-          echo "Input starts with AB#"
-          if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
-          then echo "the pr title is correct and length is ${#my_string}"
-          else
-          echo "invalid PR Format"
-          break
-          fi
-          echo "PR Title is not starts with AB#"
-          done
+#       - name: with while
+#         run: |
+#           while[[ $my_string =~ ^[AB#]]] do 
+#           echo "Input starts with AB#"
+#           if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
+#           then echo "the pr title is correct and length is ${#my_string}"
+#           else
+#           echo "invalid PR Format"
+#           break
+#           fi
+#           echo "PR Title is not starts with AB#"
+#           done
