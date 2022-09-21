@@ -32,13 +32,14 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-           my_string=AB#2346788
+           my_string=CD#2346788
            echo "length is ${#my_string}"
            
            if [[ $my_string =~ ^[AB#] ]];then
            echo "Input starts with AB#"
            else
            echo "Input does not starts with AB#"
+           exit 1
            fi
            
            if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
