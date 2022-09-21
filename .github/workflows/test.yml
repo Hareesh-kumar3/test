@@ -47,7 +47,7 @@ jobs:
            then echo "the pr title is correct and length is ${#my_string}"
            else
            echo "invalid PR Format"
-           exit1
+           exit 1
            fi
 
 #if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
