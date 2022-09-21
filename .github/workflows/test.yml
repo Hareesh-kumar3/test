@@ -53,11 +53,11 @@ jobs:
       - name: checking PR validation
         run: |
            my_string=AB#2346
-           echo "length is ${#my_string}"
-           if [[[ $my_string =~ ^[AB#]] && [ ${#my_string} == '7' -o ${#my_string} == '8' ]]];then
-           echo "PR Tiltle is valid"
+              echo "length is ${#my_string}"
+           if [[ $my_string =~ ^[AB#]] && [ ${#my_string} -eq '7' -o ${#my_string} -eq '8' ]];then
+              echo "PR Tiltle is valid"
            else
-           echo " Incorrect PR Title"
+              echo " Incorrect PR Title"
            fi
 
       - name: checking Diff IFcondition 
@@ -65,13 +65,14 @@ jobs:
            my_string=AB#2346
            echo "length is ${#my_string}"
            if [[ $my_string =~ ^[AB#] ]];then
-           echo "PR TITLE STARTS WITH AB#"
-             if [[ ${#my_string} == '7' -o ${#my_string} == '8' ]] ;then
-             echo "the pr title is correct and length is ${#my_string}"
-             else
-             echo "invalid PR TITLE"
-             fi
+              echo "PR TITLE STARTS WITH AB#"
+           elif [[ ${#my_string} == '7' -o ${#my_string} == '8' ]] ;then
+              echo "the pr title is correct and length is ${#my_string}"
+           else
+              echo "invalid PR TITLE"
            fi
+           
+           
 #       - name: practice
 #         run: |
 #           cut3= ${cut -b 4,5,6,7 my_string}
