@@ -49,7 +49,7 @@ jobs:
            else
            echo "invalid PR Format"
            echo "::error::Enter Valid PR Title Task id after AB#"
-           exit 1
+           
            fi
 
 #if [ ${#my_string} == '7' -o ${#my_string} == '8' ] ;
