@@ -52,7 +52,7 @@ jobs:
 
       - name: checking PR validation
         run: |
-           my_string=AB#2346788
+           my_string=AB#2346
            echo "length is ${#my_string}"
            
            if [[[ $my_string =~ ^[AB#] ]] -a [ ${#my_string} == '7' -o ${#my_string} == '8' ]];then
